@@ -1,6 +1,6 @@
 // Implementation of Queue using arrays
-/*
 
+// time complexity should be O(1) for Enqueue ,Dequeue,Empty,Front functions
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -32,6 +32,14 @@ int Front()
 {
     return A[front];
 }
+
+void Empty()
+{
+    if (front==NULL && rear == NULL)
+        printf("\nqueue is empyt\n");
+    else printf("\n queue is not empty");
+}
+
 void Print()
 {
     int temp = front;
@@ -44,13 +52,8 @@ void Print()
 
 int main()
 {
-    Enqueue(1);
-    Enqueue(2);
-    Enqueue(3);
-    Enqueue(4);
-    //Dequeue();Dequeue();
-    Dequeue();
-    Dequeue();
+    Enqueue(1);Enqueue(2);Enqueue(3);Enqueue(4);
+    Dequeue();Dequeue(); Dequeue(); Dequeue();
     Enqueue(5);
     Enqueue(6);
     Enqueue(7);
@@ -59,4 +62,4 @@ int main()
 
    Print();
 }
-*/
+

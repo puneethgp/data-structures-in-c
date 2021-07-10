@@ -17,7 +17,8 @@ struct Node* rear ;       // we use pointer the rear part of queue so that delet
 //end node ,which leads to O(n)
 
 /*
-
+    visulation of queue 
+    
      front =>100                                               rear=>300
 
     _100_______    _900_______    __500_____    __300______   _300________
