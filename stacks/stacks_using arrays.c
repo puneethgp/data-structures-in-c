@@ -1,9 +1,10 @@
+
 //Array implementation of stacks
 
 #include<stdio.h>
 #include<stdlib.h>
 
-#define MAX_SIZE 10
+#define MAX_SIZE 20
 int A[MAX_SIZE];
 int top =-1;
 
@@ -13,7 +14,6 @@ void Push(int x)
     {
         printf("\n stack is full");
         return;
-
     }
     A[++top]=x;
 }
