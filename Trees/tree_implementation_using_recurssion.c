@@ -30,6 +30,13 @@ struct BSTNode* Insert(struct BSTNode* root,int x)
     return root;
 }
 
+_Bool Search(struct BSTNode* root, int x)
+{
+    if (root==NULL) return false;
+    else if (root->data==x) return true;
+    else if (x>root->data) return Search(root->right,x);
+    else return   Search(root->left,x);
+}
 
 int main()
 {
