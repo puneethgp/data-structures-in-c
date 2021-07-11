@@ -1,5 +1,7 @@
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include<stdbool.h>
+#include<conio.h>
 
 struct BSTNode
 {
@@ -31,8 +33,10 @@ struct BSTNode* Insert(struct BSTNode* root,int x)
 
 int main()
 {
-    struct BSTNode* root;
+    struct BSTNode* root=NULL;
     root = Insert(root,10);
-
+    root = Insert(root,5);
+    root = Insert(root,15);
+    printf("%d",Search(root,10));
 }
-*/
+
