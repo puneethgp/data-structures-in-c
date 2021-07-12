@@ -1,3 +1,6 @@
+
+//trees implementation without recurssion
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
@@ -50,10 +53,34 @@ _Bool Search(int x)
     return false;
 }
 
+int FindMin()
+{
+if (root==NULL)
+    {
+        printf("root is empty\n");
+        return;
+    }
+    struct Node* temp = root;
+    while (temp->left!=NULL) temp = temp->left;
+    return temp->data;
+}
+int FindMax()
+{
+if (root==NULL)
+    {
+        printf("root is empty\n");
+        return;
+    }
+    struct Node* temp = root;
+    while (temp->right!=NULL) temp = temp->right;
+    return temp->data;
+}
 int main()
 {
     root = NULL;
     Insert(5);Insert(7);Insert(4);Insert(9);Insert(10);Insert(11);Insert(4);Insert(15);Insert(20);;
-    printf("%d %d %d %d",Search(5),Search(9),Search(10),Search(20));
+    printf("%d",(Search(5)?true:false));
+    printf("\n min %d max = %d\n",FindMin(),FindMax());
 }
+
 
